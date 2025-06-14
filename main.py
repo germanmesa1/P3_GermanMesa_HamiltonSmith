@@ -84,7 +84,8 @@ def menu():
             if clave not in imagenes_sencillas:
                 print("¡Clave no existe!")
                 continue
-                
+            
+            #Acá se solicitan los parámetros de procesamiento
             umbral = int(input("Umbral (0-255): "))
             tipo = input("Tipo (binario/binario_inv/truncado/tozero): ")
             kernel = int(input("Tamaño kernel (impar): "))
