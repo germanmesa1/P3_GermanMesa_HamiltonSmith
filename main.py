@@ -1,12 +1,13 @@
 # Commit 8: Menú principal con opciones a y b
 
-import cv2
+import cv2                                                            
 from matplotlib import pyplot as plt
 from clases import Paciente, ImagenMedica, ImagenSencilla
 
-pacientes = {}
-imagenes_medicas = {}
-imagenes_sencillas = {}
+#Aca se crean los diccionarios que almacenan los datos globales
+pacientes = {}                                                            #Dic objetos paciente
+imagenes_medicas = {}                                                    #Dic imagenes medicas DICOM
+imagenes_sencillas = {}                                                    #Dic imagenes sencillas JPG/PNG
 
 def menu():
     while True:
