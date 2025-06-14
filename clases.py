@@ -21,7 +21,7 @@ class ImagenMedica:
         self.volumen = None
         self.info = None
 
-
+# Commit 3: Método cargar_dicom con ordenamiento por SliceLocation
     
     def cargar_dicom(self, ruta):
         archivos = [f for f in os.listdir(ruta) if f.endswith(".dcm")]
