@@ -71,7 +71,8 @@ def menu():
             
             img_trasladada = imagenes_medicas[clave].trasladar_corte(tx, ty)
             nombre_archivo = f"trasladada_{clave}.png"
-            cv2.imwrite(nombre_archivo, img_trasladada)           
+            cv2.imwrite(nombre_archivo, img_trasladada)     # Commit 13: Guardar imagen
+      
             print(f" Imagen trasladada guardada como: {nombre_archivo}")
             
 # Commit 11: Procesamiento de JPG/PNG (Opción 5)
