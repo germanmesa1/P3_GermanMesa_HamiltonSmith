@@ -47,7 +47,7 @@ class ImagenMedica:
             plt.axis('off')
         plt.show()
 
-    
+   # Commit 7: Método de traslación con OpenCV 
 
     def trasladar_corte(self, tx=50, ty=50):  
         corte = self.volumen[self.volumen.shape[0]//2]
