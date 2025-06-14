@@ -36,7 +36,7 @@ class ImagenMedica:
     def reconstruir_3d(self):  
         cortes = [
             (self.volumen[self.volumen.shape[0]//2, :, :], 'Transversal'),
-            (self.volumen[:, self.volumen.shape[1]//2, :], 'Coronal'),    
+            (self.volumen[:, self.volumen.shape[1]//2, :], 'Coronal'),    # Commit 5: Corrección de índices para Coronal
             (self.volumen[:, :, self.volumen.shape[2]//2], 'Sagital')    
         ]
         plt.figure(figsize=(15, 5))
