@@ -74,7 +74,7 @@ def menu():
             cv2.imwrite(nombre_archivo, img_trasladada)           
             print(f" Imagen trasladada guardada como: {nombre_archivo}")
             
-
+# Commit 11: Procesamiento de JPG/PNG (Opción 5)
         
         elif op == '5':
             clave = input("Clave imagen: ")
