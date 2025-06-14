@@ -20,7 +20,7 @@ def menu():
         
         op = input("Opción: ")
 
-    # Commit 9: Implementación de carga DICOM (Opción 1)
+    
         
         if op == '1':
             ruta = input("Ruta DICOM: ")
@@ -30,7 +30,7 @@ def menu():
             img.reconstruir_3d()  # Método con nombre original
             imagenes_medicas[clave] = img
 
-    # Commit 10: Creación de pacientes (Opción 2)    
+   
         
         elif op == '2':
             clave = input("Clave DICOM: ")
@@ -58,7 +58,7 @@ def menu():
             plt.axis('off')
             plt.show()
 
-# Commit 12: Guardado de imágenes trasladadas (Opción 4)        
+  
         
         elif op == '4':
             clave = input("Clave DICOM: ")
@@ -71,10 +71,10 @@ def menu():
             
             img_trasladada = imagenes_medicas[clave].trasladar_corte(tx, ty)
             nombre_archivo = f"trasladada_{clave}.png"
-            cv2.imwrite(nombre_archivo, img_trasladada)           # Commit 13: Guardar imagen
+            cv2.imwrite(nombre_archivo, img_trasladada)           
             print(f" Imagen trasladada guardada como: {nombre_archivo}")
             
-# Commit 11: Procesamiento de JPG/PNG (Opción 5)
+
         
         elif op == '5':
             clave = input("Clave imagen: ")
