@@ -66,7 +66,8 @@ def menu():
             if clave not in imagenes_medicas:
                 print("¡Clave no existe!")
                 continue
-                
+
+            #Aca se solicitan los parametros para realizar la traslacion de la imagen, siendo 50 el valor inicial por defecto
             tx = int(input("Traslación X (default 50): ") or 50)
             ty = int(input("Traslación Y (default 50): ") or 50)
             
