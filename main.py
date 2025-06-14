@@ -20,7 +20,7 @@ def menu():
         
         op = input("Opción: ")
 
-    
+     # Commit 9: Implementación de carga DICOM (Opción 1)
         
         if op == '1':
             ruta = input("Ruta DICOM: ")
