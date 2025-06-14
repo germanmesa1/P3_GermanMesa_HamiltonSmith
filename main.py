@@ -30,7 +30,7 @@ def menu():
             img.reconstruir_3d()  # Método con nombre original
             imagenes_medicas[clave] = img
 
-   
+        # Commit 10: Creación de pacientes (Opción 2)
         
         elif op == '2':
             clave = input("Clave DICOM: ")
