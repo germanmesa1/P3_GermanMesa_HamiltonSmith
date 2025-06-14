@@ -1,3 +1,5 @@
+# Commit 8: Menú principal con opciones a y b
+
 import cv2
 from matplotlib import pyplot as plt
 from clases import Paciente, ImagenMedica, ImagenSencilla
@@ -17,6 +19,8 @@ def menu():
         print("6. Salir")
         
         op = input("Opción: ")
+
+    # Commit 9: Implementación de carga DICOM (Opción 1)
         
         if op == '1':
             ruta = input("Ruta DICOM: ")
@@ -25,7 +29,9 @@ def menu():
             img.cargar_dicom(ruta)
             img.reconstruir_3d()  # Método con nombre original
             imagenes_medicas[clave] = img
-            
+
+    # Commit 10: Creación de pacientes (Opción 2)    
+        
         elif op == '2':
             clave = input("Clave DICOM: ")
             if clave not in imagenes_medicas:
@@ -51,7 +57,9 @@ def menu():
             plt.imshow(img.imagen)
             plt.axis('off')
             plt.show()
-            
+
+# Commit 12: Guardado de imágenes trasladadas (Opción 4)        
+        
         elif op == '4':
             clave = input("Clave DICOM: ")
             if clave not in imagenes_medicas:
@@ -63,9 +71,11 @@ def menu():
             
             img_trasladada = imagenes_medicas[clave].trasladar_corte(tx, ty)
             nombre_archivo = f"trasladada_{clave}.png"
-            cv2.imwrite(nombre_archivo, img_trasladada)
+            cv2.imwrite(nombre_archivo, img_trasladada)           # Commit 13: Guardar imagen
             print(f" Imagen trasladada guardada como: {nombre_archivo}")
             
+# Commit 11: Procesamiento de JPG/PNG (Opción 5)
+        
         elif op == '5':
             clave = input("Clave imagen: ")
             if clave not in imagenes_sencillas:
