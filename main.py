@@ -58,7 +58,7 @@ def menu():
             plt.axis('off')
             plt.show()
 
-  
+  # Commit 12: Guardado de imágenes trasladadas (Opción 4)
         
         elif op == '4':
             clave = input("Clave DICOM: ")
