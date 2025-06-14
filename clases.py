@@ -31,7 +31,7 @@ class ImagenMedica:
         self.info = self.imagenes[0]
         return self.volumen
         
-
+# Commit 4: Reconstrucción 3D con visualización de cortes
     
     def reconstruir_3d(self):  
         cortes = [
