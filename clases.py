@@ -21,7 +21,7 @@ class ImagenMedica:
         self.volumen = None
         self.info = None
 
-# Commit 3: Método cargar_dicom con ordenamiento por SliceLocation
+
     
     def cargar_dicom(self, ruta):
         archivos = [f for f in os.listdir(ruta) if f.endswith(".dcm")]
@@ -31,13 +31,13 @@ class ImagenMedica:
         self.info = self.imagenes[0]
         return self.volumen
         
-# Commit 4: Reconstrucción 3D con visualización de cortes
+
     
     def reconstruir_3d(self):  
         cortes = [
             (self.volumen[self.volumen.shape[0]//2, :, :], 'Transversal'),
-            (self.volumen[:, self.volumen.shape[1]//2, :], 'Coronal'),    # Commit 5: Corrección de índices para Coronal
-            (self.volumen[:, :, self.volumen.shape[2]//2], 'Sagital')    # Commit 6: Corrección de índices para Sagital
+            (self.volumen[:, self.volumen.shape[1]//2, :], 'Coronal'),    
+            (self.volumen[:, :, self.volumen.shape[2]//2], 'Sagital')    
         ]
         plt.figure(figsize=(15, 5))
         for i, (corte, titulo) in enumerate(cortes, 1):
@@ -47,7 +47,7 @@ class ImagenMedica:
             plt.axis('off')
         plt.show()
 
-    # Commit 7: Método de traslación con OpenCV
+    
 
     def trasladar_corte(self, tx=50, ty=50):  
         corte = self.volumen[self.volumen.shape[0]//2]
